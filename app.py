@@ -6,7 +6,7 @@ import pickle as pkl
 from bson import ObjectId
 
 app = Flask(__name__)
-app.config["MONGO_URI"] = "mongodb://localhost:27017/MedicalDB"
+app.config["MONGO_URI"] = "mongodb+srv://admin:admin123@cluster0.yjdrfwz.mongodb.net/MedicalDB?retryWrites=true&w=majority"
 mongo = PyMongo(app)
 
 @app.route("/")
@@ -65,4 +65,5 @@ def predict(patient_id):
 
 
 if __name__ == "__main__":
+
     app.run(debug=True)
